@@ -462,7 +462,7 @@ for a one-unit increase in that feature, holding the other features fixed.
 
     if model_choice == "Random Forest":
         st.subheader("Feature Importance")
-        fst.dataframe(results["importance"].reset_index(drop=True), use_container_width=True)
+        st.dataframe(results["importance"].reset_index(drop=True), use_container_width=True)
 
         plot_feature_bar(
             results["importance"].head(6),
