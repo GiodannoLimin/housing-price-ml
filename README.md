@@ -1,23 +1,23 @@
-# California Housing Price Analysis and Prediction Dashboard
+# California Housing Price Prediction Dashboard
 
-An interactive machine learning dashboard built with Python, Scikit-Learn, and Streamlit to analyze and predict housing prices using the California Housing dataset.
+An interactive machine learning dashboard built with Python, Scikit-learn, and Streamlit to analyze and predict housing values using the California Housing benchmark dataset.
 
-This project combines exploratory data analysis (EDA), regression modeling, model diagnostics, and mathematical explanations in an interactive web application.
+This project combines exploratory data analysis (EDA), regression modeling, model diagnostics, model interpretation, and mathematical explanations in an interactive web application.
 
 --------------------------------------------------
 
 PROJECT OVERVIEW
 
-The goal of this project is to explore the relationship between socioeconomic and geographic variables and housing prices and build predictive models to estimate housing values.
+The goal of this project is to examine how socioeconomic and geographic variables relate to housing values and to build predictive models for regression analysis.
 
 The dashboard allows users to:
 
 - Explore the dataset
 - Visualize feature relationships
-- Train multiple machine learning models
-- Compare model performance
+- Compare multiple regression models
 - Inspect model diagnostics
-- Export predictions
+- Interpret model outputs
+- Generate and export predictions
 
 --------------------------------------------------
 
@@ -41,6 +41,9 @@ Target variable:
 
 Target      : Median house value proxy used for prediction
 
+Note:
+This dataset is a standard benchmark dataset for regression modeling and is used here for model comparison and dashboard development.
+
 --------------------------------------------------
 
 MODELS IMPLEMENTED
@@ -49,10 +52,10 @@ MODELS IMPLEMENTED
    Baseline regression model using ordinary least squares.
 
 2. Ridge Regression
-   Regularized linear regression with an L2 penalty to reduce variance.
+   Regularized linear regression with an L2 penalty to reduce coefficient variance.
 
 3. Random Forest Regressor
-   Ensemble model using multiple decision trees to capture nonlinear relationships.
+   Tree-based ensemble model used to capture nonlinear relationships between features and the target.
 
 --------------------------------------------------
 
@@ -62,10 +65,10 @@ RMSE (Root Mean Squared Error)
 Measures prediction error while penalizing larger errors more strongly.
 
 MAE (Mean Absolute Error)
-Average magnitude of prediction errors.
+Measures the average absolute magnitude of prediction errors.
 
 R² (Coefficient of Determination)
-Measures the proportion of variance in the target variable explained by the model.
+Measures the proportion of variance in the target explained by the model.
 
 --------------------------------------------------
 
@@ -78,7 +81,7 @@ Dataset Overview
 - Summary statistics
 
 Exploratory Data Analysis
-- Histograms of important variables
+- Histograms of key variables
 - Scatter plots of feature relationships
 - Correlation matrix
 - Feature correlations with the target variable
@@ -93,6 +96,10 @@ Model Interpretability
 - Coefficient magnitude visualization
 - Random forest feature importance
 
+Prediction Tool
+- Interactive feature inputs
+- Real-time model prediction output
+
 Diagnostics and Export
 - Prediction tables
 - Residual summaries
@@ -105,16 +112,16 @@ PROJECT STRUCTURE
 housing-price-ml/
 
 app.py
-Main Streamlit dashboard application.
+Main Streamlit dashboard application
 
 requirements.txt
-Python dependencies.
+Python dependencies
 
-README.txt
-Project documentation.
+README.md
+Project documentation
 
 LICENSE
-Repository license.
+Repository license
 
 --------------------------------------------------
 
@@ -122,7 +129,7 @@ INSTALLATION
 
 Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/housing-price-ml.git
+git clone https://github.com/GiodannoLimin/housing-price-ml.git
 
 Navigate to the project directory
 
@@ -148,18 +155,26 @@ http://localhost:8501
 
 TECHNOLOGIES USED
 
-Python  
-Streamlit  
-Scikit-Learn  
-Pandas  
-NumPy  
+Python
+Streamlit
+Scikit-learn
+Pandas
+NumPy
 Matplotlib
+
+--------------------------------------------------
+
+LIMITATIONS
+
+- This project uses a benchmark dataset and does not represent current housing market conditions.
+- Model performance depends on the train-test split and selected hyperparameters.
+- The target variable is a dataset-defined housing value proxy rather than a real-time appraisal output.
 
 --------------------------------------------------
 
 FUTURE IMPROVEMENTS
 
-Possible extensions include
+Possible extensions include:
 
 - Geographic visualization of housing prices
 - Cross-validation for model stability
